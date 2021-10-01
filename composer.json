@@ -1,0 +1,25 @@
+{
+    "name": "adaddinsane/dataobject",
+    "type": "library",
+    "description": "Data object storage and recovery",
+    "version": "0.1.0",
+    "license": "MIT",
+    "keywords": ["array", "values", "data", "object", "storage", "immutable"],
+    "authors": [
+        {
+            "name": "Steve Turnbull",
+            "email": "adaddinsane@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Adaddinsane\\DataObject\\": "src"
+        }
+    },
+    "require": {
+        "php": ">=7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    }
+}
