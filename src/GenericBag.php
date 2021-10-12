@@ -10,7 +10,12 @@ abstract class GenericBag extends DataObject implements GenericBagInterface {
   /**
    * A list of the permitted classes that can be put in this bag.
    *
-   * This value should be overridden in child classes.
+   * This value should be overridden in child classes. You can do things like:
+   *
+   * protected $permittedClasses = [
+   *   MyClass::class,
+   *   AnInterface::class
+   * ];
    *
    * @var string[]
    */
@@ -46,7 +51,15 @@ abstract class GenericBag extends DataObject implements GenericBagInterface {
       return TRUE;
     }
 
-    return in_array(get_class($item), $this->permittedClasses);
+    // We check each permitted class individually.
+    $isValid = false;
+    foreach ($this->permittedClasses as $permittedClass) {
+        if ($item instanceof $permittedClass) {
+            $isValid = true;
+        }
+    }
+
+    return $isValid;
   }
 
   /**
