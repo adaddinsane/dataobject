@@ -7,6 +7,9 @@ Why would you do this? The main reason is that simply passing arrays gives you
 no validation of _what_ is being passed, but an array as an object can be
 type-hinted so provide better certainty of correct code.
 
+All classes are abstract (which is ignored in the examples below) and must be
+extended in order to be used.
+
 Options
 -------
 One class allows the data to be written, while the other provides an immutable
@@ -57,6 +60,18 @@ You can now type-hint in arguments to ensure you're delivering the right item.
 ```php
 function analyse(PersonData $person) { ... }
 ```
+
+GenericBag
+----------
+This is a third abstract object which extends a DataObject to allow the items
+being added to be verified as being of a specific class type or types.
+
+The verification function can also be overridden if something other than
+classes are being stored.
+
+The point of a Bag is that you can have a collection of items which can be
+passed around together, and can be type-hinted to ensure the right items are
+being delivered.
 
 Other forms of access
 ---------------------
