@@ -3,9 +3,9 @@
 namespace Adaddinsane\DataObject;
 
 /**
- * Class ImmutableDataObject.
+ * Abstract Class ImmutableDataObject.
  */
-class ImmutableDataObject implements ImmutableDataObjectInterface
+abstract class ImmutableDataObject implements ImmutableDataObjectInterface
 {
     /**
      * The storage for the array being accessed.

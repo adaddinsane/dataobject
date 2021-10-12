@@ -2,7 +2,10 @@
 
 namespace Adaddinsane\DataObject;
 
-class DataObject extends ImmutableDataObject implements DataObjectInterface
+/**
+ * Abstract Class DataObject
+ */
+abstract class DataObject extends ImmutableDataObject implements DataObjectInterface
 {
 
     /**
