@@ -2,7 +2,7 @@
     "name": "adaddinsane/dataobject",
     "type": "library",
     "description": "Data object storage and recovery",
-    "version": "0.2.1-alpha",
+    "version": "1.0.0",
     "license": "MIT",
     "keywords": ["array", "values", "data", "object", "storage", "immutable"],
     "authors": [
