@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bb40b06-9c9e-4ec1-8efd-bf47f9bf27ab" name="Changes" comment="Add the Generic Bag and minor textual updates.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6bb40b06-9c9e-4ec1-8efd-bf47f9bf27ab" name="Changes" comment="Fixed class type checking and added some more documentation." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,6 +56,7 @@
       <workItem from="1632928316134" duration="257000" />
       <workItem from="1633074277213" duration="7276000" />
       <workItem from="1634028475474" duration="859000" />
+      <workItem from="1634029654665" duration="1064000" />
     </task>
     <task id="LOCAL-00001" summary="First commit.">
       <created>1633082361649</created>
@@ -94,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634029176401</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fixed class type checking and added some more documentation.">
+      <created>1634030050833</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1634030050833</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +121,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit." />
     <MESSAGE value="Add the Generic Bag and minor textual updates." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add the Generic Bag and minor textual updates." />
+    <MESSAGE value="Fixed class type checking and added some more documentation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed class type checking and added some more documentation." />
   </component>
 </project>
