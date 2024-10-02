@@ -11,13 +11,13 @@ abstract class DataObject extends ImmutableDataObject implements DataObjectInter
     /**
      * @inheritDoc
      */
-    public function set(string $key, $value, bool $mustExist = false): void
+    public function set(string $key, mixed $item, bool $mustExist = false): void
     {
         if ($mustExist && !$this->has($key)) {
             throw new DataObjectException(sprintf('Trying to set a property (%s) that does not exist.', $key));
         }
 
-        $this->data[$key] = $value;
+        $this->data[$key] = $item;
     }
 
     /**

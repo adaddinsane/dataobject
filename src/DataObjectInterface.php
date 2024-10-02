@@ -12,14 +12,14 @@ interface DataObjectInterface extends ImmutableDataObjectInterface
      * property does not exist.
      *
      * @param string $key
-     * @param mixed $value
+     * @param mixed $item
      * @param bool $mustExist
      *
      * @return void
      *
      * @throws DataObjectException
      */
-    public function set(string $key, $value, bool $mustExist = false): void;
+    public function set(string $key, mixed $item, bool $mustExist = false): void;
 
     /**
      * Remove the named property from the data.

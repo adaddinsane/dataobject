@@ -1,10 +1,10 @@
 {
     "name": "adaddinsane/dataobject",
     "type": "library",
-    "description": "Data object storage and recovery",
-    "version": "1.0.0",
+    "description": "Data object storage and recovery with sorting, filtering and merging",
+    "version": "1.1.0",
     "license": "MIT",
-    "keywords": ["array", "values", "data", "object", "storage", "immutable"],
+    "keywords": ["array", "values", "data", "object", "storage", "immutable", "sort", "filter", "merge"],
     "authors": [
         {
             "name": "Steve Turnbull",
