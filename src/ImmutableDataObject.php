@@ -8,11 +8,9 @@ namespace Adaddinsane\DataObject;
 abstract class ImmutableDataObject implements ImmutableDataObjectInterface
 {
     /**
-     * The storage for the array being accessed.
-     *
-     * @var array
+     * The storage for the data belonging to this object.
      */
-    protected $data = [];
+    protected array $data = [];
 
     /**
      * Constructor for ImmutableDataObject.
@@ -35,7 +33,7 @@ abstract class ImmutableDataObject implements ImmutableDataObjectInterface
     /**
      * @inheritDoc
      */
-    public function get(string $key, $default = null)
+    public function get(string $key, $default = null): mixed
     {
         return $this->data[$key] ?? $default;
     }

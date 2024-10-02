@@ -2,7 +2,7 @@
 
 namespace Adaddinsane\DataObject;
 
-interface ImmutableDataObjectInterface extends  \IteratorAggregate, \Countable
+interface ImmutableDataObjectInterface extends \IteratorAggregate, \Countable
 {
 
     /**
@@ -22,7 +22,7 @@ interface ImmutableDataObjectInterface extends  \IteratorAggregate, \Countable
      *
      * @return mixed
      */
-    public function get(string $key, $default = null);
+    public function get(string $key, $default = null): mixed;
 
     /**
      * Fetch all the values.

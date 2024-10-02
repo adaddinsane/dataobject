@@ -19,10 +19,12 @@ abstract class GenericBag extends DataObject implements GenericBagInterface {
    *
    * @var string[]
    */
-  protected $permittedClasses = [];
+  protected array $permittedClasses = [];
 
   /**
    * @param array $items
+   *
+   * @throws DataObjectException
    */
   public function __construct(array $items = []) {
     foreach ($items as $item) {
@@ -43,7 +45,7 @@ abstract class GenericBag extends DataObject implements GenericBagInterface {
    *
    * @return bool
    */
-  protected function verifyItem($item): bool {
+  protected function verifyItem(mixed $item): bool {
     if (!is_object($item)) {
       return FALSE;
     }
@@ -56,6 +58,7 @@ abstract class GenericBag extends DataObject implements GenericBagInterface {
     foreach ($this->permittedClasses as $permittedClass) {
         if ($item instanceof $permittedClass) {
             $isValid = true;
+            break;
         }
     }
 
@@ -67,7 +70,7 @@ abstract class GenericBag extends DataObject implements GenericBagInterface {
    *
    * @throws DataObjectException
    */
-  public function set(string $key, $item, bool $mustExist = FALSE): void {
+  public function set(string $key, mixed $item, bool $mustExist = FALSE): void {
     if (!$this->verifyItem($item)) {
       throw new DataObjectException('Supplied item does not go in this bag.');
     }

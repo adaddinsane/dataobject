@@ -24,13 +24,13 @@ $data = [
 $object = new DataObject($data);
 
 $a = $object->get('a');
-$b = $object->get('b', 'z'); // Default value if 'b' is not set.
+$b = $object->get('b', 'z'); // Default value 'z', if 'b' key is not set.
 
 $data->set('b', 'q');
 
 $immutable = new ImmutableDataObject($data);
 
-$data->set('b', 'q'); // Exception thrown (optionally).
+$immutable->set('b', 'q'); // Method not permitted.
 ```
 
 This package can be used in conjunction with the ParamVerify package that can
@@ -72,6 +72,28 @@ classes are being stored.
 The point of a Bag is that you can have a collection of items which can be
 passed around together, and can be type-hinted to ensure the right items are
 being delivered.
+
+### Merge
+In your GenericBag class, implement the `GenericBagMergeInterface` class and
+`trait GenericBagMergeTrait;` you then have access to a merge() method which
+takes another GenericBag object as a parameter.
+
+### Filter
+In your GenericBag class, implement the `GenericBagFilterInterface` class and
+`trait GenericBagFilterTrait;` you then have access to a filter() method which
+takes a filter callable.
+
+The filter callable is used in an `array_filter()` command on the GenericBag's
+data  to extract a subset of items which is then used to create and return a
+new GenericBag of the same class.
+
+### Sort
+In your GenericBag class, implement the `GenericBagSortInterface` class and
+`trait GenericBagSortTrait;` you then have access to a sort() method which
+takes a sort callable.
+
+The sort callable is used in an `uasort()` command on the GenericBag's
+data which sorts the items of this GenericBag. No value is returned.
 
 Other forms of access
 ---------------------
